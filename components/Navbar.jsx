@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between">
+    <nav className="w-full bg-white border-b border-gray-200 px-4 md:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
       {/* Left: Logo + Beta */}
       <div className="flex items-center gap-2 ml-6 mt-1">
         <Image
@@ -32,7 +32,7 @@ export default function Navbar() {
       </div>
 
       {/* Center: Navigation + Search */}
-      <div className="flex items-center gap-4 text-md font-medium text-gray-700 ml-20">
+      <div className="hidden md:flex items-center gap-4 text-sm md:text-md font-medium text-gray-700 ml-0 md:ml-20">
         <a
           href="#home"
           className="hover:text-gray-800 transition-colors text-gray-600"
@@ -59,7 +59,7 @@ export default function Navbar() {
         </a>
 
         {/* Search Bar */}
-        <div className="flex items-center mr-5 px-2 py-2.5 bg-white rounded-2xl border border-gray-200 shadow-sm w-64">
+        <div className="flex items-center w-full md:w-64 px-2 py-2.5 bg-white rounded-2xl border border-gray-200 shadow-sm">
           <input
             type="text"
             placeholder="Search..."
